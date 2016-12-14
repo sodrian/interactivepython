@@ -1,10 +1,11 @@
 class Fraction(object):
+    INT_ERROR_MSG = u'Only integers are acceptable'
+
     def __init__(self, num, den):
-        _int_error_msg = u'Only integers are acceptable'
         if not isinstance(num, int):
-            raise TypeError(_int_error_msg)
+            raise TypeError(self.INT_ERROR_MSG)
         if not isinstance(den, int):
-            raise TypeError(_int_error_msg)
+            raise TypeError(self.INT_ERROR_MSG)
 
         if den < 0:
             den *= -1

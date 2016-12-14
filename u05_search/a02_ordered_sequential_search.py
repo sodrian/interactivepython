@@ -1,3 +1,6 @@
+#!/usr/bin/env python
+
+
 def ordered_sequential_search(l, item):
     l = list(l)
     pos = 0
@@ -14,5 +17,7 @@ def ordered_sequential_search(l, item):
 
     return found
 
-print(ordered_sequential_search(range(10), 5))
-print(ordered_sequential_search(range(0, 100, 5), 4))
+
+if __name__ == '__main__':
+    print(ordered_sequential_search(range(10), 5))
+    print(ordered_sequential_search(range(0, 100, 5), 4))

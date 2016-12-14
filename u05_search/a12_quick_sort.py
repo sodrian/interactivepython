@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 import random
 
 
@@ -45,9 +46,8 @@ def partition(lst, first, last):
     return right_mark
 
 
-
-l = random.sample(range(1000), 10)
-print(l)
-quick_sort_partition(l)
-print(l)
-
+if __name__ == '__main__':
+    l = random.sample(range(1000), 10)
+    print(l)
+    quick_sort_partition(l)
+    print(l)

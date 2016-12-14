@@ -1,3 +1,6 @@
+#!/usr/bin/env python
+
+
 class Node(object):
     def __init__(self, item):
         self.data = item
@@ -28,10 +31,12 @@ class UnorderedList(object):
         s += ']'
         return s
 
-l = UnorderedList()
-l.add('some')
-print(l)
-l.add('print')
-print(l)
-l.add('something else')
-print(l)
+
+if __name__ == '__main__':
+    l = UnorderedList()
+    l.add('some')
+    print(l)
+    l.add('print')
+    print(l)
+    l.add('something else')
+    print(l)

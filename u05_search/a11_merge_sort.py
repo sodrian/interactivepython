@@ -1,8 +1,9 @@
+#!/usr/bin/env python
 import random
 
 
 def merge_sort(lst):
-    print('merging %s' % lst)
+    print('splitting %s' % lst)
 
     if len(lst) > 1:
         mid = len(lst) // 2
@@ -34,8 +35,9 @@ def merge_sort(lst):
             j += 1
             k += 1
 
-    print('splitting %s' % lst)
+    print('merging %s' % lst)
 
 
-l = random.sample(range(100), 10)
-merge_sort(l)
+if __name__ == '__main__':
+    l = random.sample(range(100), 10)
+    merge_sort(l)

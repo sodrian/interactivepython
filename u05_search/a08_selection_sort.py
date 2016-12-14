@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 import random
 
 
@@ -13,7 +14,8 @@ def selection_sort(l):
         l[maximum_pos], l[i] = l[i], l[maximum_pos]
 
 
-l = [random.randint(10, 100) for i in range(10)]
-print(l)
-selection_sort(l)
-print(l)
+if __name__ == '__main__':
+    l = [random.randint(10, 100) for i in range(10)]
+    print(l)
+    selection_sort(l)
+    print(l)

@@ -1,3 +1,6 @@
+#!/usr/bin/env python
+
+
 class Node(object):
     def __init__(self, item):
         self.data = item
@@ -59,12 +62,14 @@ class UnorderedLinkedList(object):
             cur_pos += 1
         return ret_list
 
-l = UnorderedLinkedList()
-l.add('some')
-l.add('print')
-l.add('this')
-l.add('alson')
-print(l)
-print(l.slice(0,1))
-print(l.slice(0,2))
-print(l.slice(3,4))
+
+if __name__ == '__main__':
+    l = UnorderedLinkedList()
+    l.add('some')
+    l.add('print')
+    l.add('this')
+    l.add('also')
+    print(l)
+    print(l.slice(0,1))
+    print(l.slice(0,2))
+    print(l.slice(3,4))

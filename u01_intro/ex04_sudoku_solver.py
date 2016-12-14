@@ -1,8 +1,11 @@
+#!/usr/bin/env python
+
+
 class SudokuTable(object):
     TABLE_SIZE = 9
 
     def __init__(self, d):
-        self.t = self.init_square(self.TABLE_SIZE)
+        self.init_square(self.TABLE_SIZE)
         if not len(d) == self.TABLE_SIZE * self.TABLE_SIZE:
             raise ValueError('Input data must contain 81 elements')
         self.input_data(d)
@@ -11,7 +14,7 @@ class SudokuTable(object):
         sq = [[]] * size
         for i in range(size):
             sq[i] = [[]] * size
-        return sq
+        self.t = sq
 
     def input_data(self, d):
         for i in range(self.TABLE_SIZE):
@@ -152,6 +155,9 @@ class SudokuTable(object):
                     print('No solution has been found :=(')
                 break
 
-d = '       591  3 86     95   4  472  18    3    56  847  8   13     34 5  765       '
-t = SudokuTable(d)
-t.solve()
+
+if __name__ == '__main__':
+    d = '       591  3 86     95   4  472  18    3    56  847  8   13     34 5  765       '
+    t = SudokuTable(d)
+    t.solve()
+    print(t.t)

@@ -1,3 +1,6 @@
+#!/usr/bin/env python
+
+
 def vis_print(length, first, mid, last):
     print('-'*length)
     print(' '*first + '|' +
@@ -25,6 +28,8 @@ def binary_search(l, item):
 
     return found
 
-print(binary_search(range(100), 20))
-print(binary_search(range(100), 0))
-print(binary_search(range(100), 1000))
+
+if __name__ == '__main__':
+    print(binary_search(range(100), 20))
+    print(binary_search(range(100), 0))
+    print(binary_search(range(100), 1000))

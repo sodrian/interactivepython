@@ -1,3 +1,6 @@
+#!/usr/bin/env python
+
+
 class Node(object):
     def __init__(self, data):
         assert data is not None, 'data must be not None'
@@ -244,14 +247,16 @@ class OrderedList(LinkedList):
         else:
             raise IndexError('No item found with given position')
 
-l = UnorderedList()
-l.add(1)
-l.add('some')
-l.add('some3')
-l.add('4')
-l.add(5)
-l.add(True)
-l.show_list()
-l.append('some more')
-l.show_list()
-l.length()
+
+if __name__ == '__main__':
+    l = UnorderedList()
+    l.add(1)
+    l.add('some')
+    l.add('some3')
+    l.add('4')
+    l.add(5)
+    l.add(True)
+    l.show_list()
+    l.append('some more')
+    l.show_list()
+    l.length()

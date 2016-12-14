@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 from random import shuffle
 
 
@@ -57,11 +58,16 @@ class Table(CardContainer):
         self.cont.append(card)
 
 
-d = Deck()
-h1 = Hand()
-h2 = Hand()
+if __name__ == '__main__':
+    d = Deck()
+    h1 = Hand()
+    h2 = Hand()
 
-h1.add(d.pop(6))
-h2.add(d.pop(6))
+    h1.add(d.pop(6))
+    h2.add(d.pop(6))
 
-t = Table()
+    t = Table()
+
+    print(t)
+    print(h1)
+    print(h2)

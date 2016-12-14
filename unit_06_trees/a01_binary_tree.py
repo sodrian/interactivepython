@@ -1,3 +1,6 @@
+#!/usr/bin/env python
+
+
 class Node(object):
     def __init__(self, value):
         self.value = value
@@ -11,8 +14,8 @@ class Node(object):
         self.right = value
 
 
-
-t = Node(4)
-t.assign_left(Node(2))
-t.assign_right(Node(7))
-print(t)
+if __name__ == '__main__':
+    t = Node(4)
+    t.assign_left(Node(2))
+    t.assign_right(Node(7))
+    print(t)

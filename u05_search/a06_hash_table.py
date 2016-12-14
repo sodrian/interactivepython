@@ -1,3 +1,6 @@
+#!/usr/bin/env python
+
+
 class HashTable(object):
     def __init__(self):
         self.size = 11
@@ -60,21 +63,23 @@ class HashTable(object):
     def __setitem__(self, item, data):
         self.put(item, data)
 
-t = HashTable()
-t.put(10, 'some')
-t.put(23, 'other')
-t.put(33, 'words')
-t.put(46, 'might')
-t.put(52, 'be')
-t.put(64, 'more')
-t.put(79, 'appropriate')
-t.put(87, 'than')
-t.put(91, 'what')
-t.put(109, 'you say')
-print(t.keys)
-print(t.values)
-print(t.get((10)))
-print(t.get((30)))
-print(t[10])
-t[52] = 'otheressss'
-print(t[52])
+
+if __name__ == '__main__':
+    t = HashTable()
+    t.put(10, 'some')
+    t.put(23, 'other')
+    t.put(33, 'words')
+    t.put(46, 'might')
+    t.put(52, 'be')
+    t.put(64, 'more')
+    t.put(79, 'appropriate')
+    t.put(87, 'than')
+    t.put(91, 'what')
+    t.put(109, 'you say')
+    print(t.keys)
+    print(t.values)
+    print(t.get((10)))
+    print(t.get((30)))
+    print(t[10])
+    t[52] = 'otheressss'
+    print(t[52])

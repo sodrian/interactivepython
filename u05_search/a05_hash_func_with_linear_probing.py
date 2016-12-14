@@ -1,3 +1,6 @@
+#!/usr/bin/env python
+
+
 class HashTable(object):
     def __init__(self, table_size):
         assert isinstance(table_size, int)
@@ -13,7 +16,6 @@ class HashTable(object):
             iters += 1
             if self.c[slot] is None:
                 found = True
-        print(iters)
         return slot
 
     def add(self, item):
@@ -35,14 +37,15 @@ class HashTable(object):
         print(s)
 
 
-t = HashTable(11)
-t.add(113)
-t.add(117)
-t.add(97)
-t.add(100)
-t.add(114)
-t.add(108)
-t.add(116)
-t.add(105)
-t.add(99)
-t.print_table()
+if __name__ == '__main__':
+    t = HashTable(11)
+    t.add(113)
+    t.add(117)
+    t.add(97)
+    t.add(100)
+    t.add(114)
+    t.add(108)
+    t.add(116)
+    t.add(105)
+    t.add(99)
+    t.print_table()

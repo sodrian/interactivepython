@@ -1,9 +1,11 @@
+#!/usr/bin/env python
 import re
 
 COMMON_TAG_RE = re.compile(r'</{0,1}([a-zA-Z]+)/{0,1}>')
 SINGLE_TAG_RE = re.compile(r'<([a-zA-Z]+)/{1}>')
 OPENING_TAG_RE = re.compile(r'<([a-zA-Z]+)>')
 CLOSING_TAG_RE = re.compile(r'</{1}([a-zA-Z]+)>')
+
 
 class Stack(object):
     def __init__(self):
@@ -56,19 +58,21 @@ class BalancedHTML(object):
                     break
         return balanced
 
-s = '''
-<html>
-   <head>
-      <title>
-         <br/>
-         Example
-      </title>
-      </title>
-   </head>
-   <body>
-      <h1>Hello, world</h1>
-   </body>
-</html>'''
 
-h = BalancedHTML(s)
-h.check()
+if __name__ == '__main__':
+    s = '''
+    <html>
+       <head>
+          <title>
+             <br/>
+             Example
+          </title>
+          </title>
+       </head>
+       <body>
+          <h1>Hello, world</h1>
+       </body>
+    </html>'''
+
+    h = BalancedHTML(s)
+    print(h.check())
