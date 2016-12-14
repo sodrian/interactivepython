@@ -1,3 +1,7 @@
+#!/usr/bin/env python
+import random
+
+
 class Stack(object):
     def __init__(self):
         self.cont = []
@@ -135,4 +139,16 @@ def convert_to_base(number, base):
     while not s.is_empty():
         out += str(DIGITS[s.pop()])
 
-    print(out)
+    return out
+
+
+if __name__ == '__main__':
+    n = 10
+    digits = random.sample(range(10000), n)
+    bases = random.sample(range(2, 20), n)
+
+    for i in xrange(1, n):
+        print('{0} with base {1} is {2}'.format(
+            digits[i],
+            bases[i],
+            convert_to_base(digits[i], bases[i])))

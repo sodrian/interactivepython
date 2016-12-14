@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 from random import shuffle
 
-
 CARD_SUITS = ['s', 'h', 'c', 'd']
 CARD_NUMBERS = list(map(str, (range(6, 11)))) + (['j', 'q', 'k', 'a'])
 
@@ -17,10 +16,22 @@ class Card(object):
         self.number = number
         self.hand = None
 
+    def __str__(self):
+        return '{0} {1}'.format(self.number, self.suit)
+
+    def __unicode__(self):
+        return self.__str__()
+
 
 class CardContainer(object):
     def __init__(self):
         self.cont = []
+
+    def __str__(self):
+        return str([str(c) for c in self.cont])
+
+    def __unicode__(self):
+        return self.__str__()
 
 
 class Hand(CardContainer):
@@ -54,8 +65,7 @@ class Deck(CardContainer):
 
 
 class Table(CardContainer):
-    def go_with(self, card):
-        self.cont.append(card)
+    pass
 
 
 if __name__ == '__main__':
@@ -66,8 +76,5 @@ if __name__ == '__main__':
     h1.add(d.pop(6))
     h2.add(d.pop(6))
 
-    t = Table()
-
-    print(t)
     print(h1)
     print(h2)

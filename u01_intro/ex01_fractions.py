@@ -1,3 +1,6 @@
+#!/usr/bin/env python
+
+
 class Fraction(object):
     INT_ERROR_MSG = u'Only integers are acceptable'
 
@@ -81,3 +84,17 @@ class Fraction(object):
 
     def get_den(self):
         return self.den
+
+
+if __name__ == '__main__':
+    pairs = [
+        (2, 3),
+        (3, 6),
+        (10, 15),
+        (30, 60),
+        (12, 48),
+        (4, 2)]
+
+    for p in pairs:
+        f = Fraction(*p)
+        print('{0} -> {1}'.format(p, f))
